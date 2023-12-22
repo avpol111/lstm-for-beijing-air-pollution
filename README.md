@@ -1,3 +1,3 @@
 # lstm-for-beijing-air-pollution
-An LSTM model in Pytorch to predict the air pollution in Beijing
+An LSTM model in Pytorch to predict the air pollution in Beijing.
 Details: initially, I wanted to implement in Pytorch the model from this article: https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/; however, having tried different variants, I found out that a univariate version is more accurate (RMSE of 23.1665 instead of 26.496 in the original). Thus, I implemented it as a univariate one. I also didn't resort to scaling with sklearn MinMaxScaler, because the improvement in RMSE it gives is marginal (22.6848 vs 23.5322 in the window 4 version). Additionally, I chose multiple time steps (specifically, a window of 5), because it gave the best results in comparison to other configurations.
